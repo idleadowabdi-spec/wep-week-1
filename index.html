@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal budget and expense tracker to organize income and expenses.">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 id="main-heading">My Budget Tracker</h1>
+            <p>Track your income and expenses in one place.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Add Expense Section -->
+        <section class="expense-form-section" id="add-expense">
+            <h2>Add Expense</h2>
+            <p class="section-description">
+                Keep track of your spending by recording a new expense below.
+            </p>
+
+            <form>
+                <div class="form-group">
+                    <label for="expense-name">Expense Name</label>
+                    <input
+                        type="text"
+                        id="expense-name"
+                        name="expense-name"
+                        placeholder="e.g. Groceries"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-amount">Amount (KSh)</label>
+                    <input
+                        type="number"
+                        id="expense-amount"
+                        name="expense-amount"
+                        placeholder="e.g. 1500"
+                        min="0"
+                        step="0.01"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-category">Category</label>
+                    <select id="expense-category" name="expense-category">
+                        <option value="">Select a category</option>
+                        <option value="food">Food & Groceries</option>
+                        <option value="transport">Transport</option>
+                        <option value="housing">Housing</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="health">Health</option>
+                        <option value="education">Education</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <button type="button" class="submit-button">
+                    Add Expense
+                </button>
+            </form>
+
+            <p class="note">
+                Note: Expense tracking functionality will be added in a future week.
+            </p>
+        </section>
+
+        <!-- Your Expenses Section -->
+        <section class="expenses-list-section" id="your-expenses">
+            <div class="section-heading">
+                <h2>Your Expenses</h2>
+                <span class="expense-count">0 expenses</span>
+            </div>
+
+            <div class="empty-state">
+                <div class="empty-icon" aria-hidden="true">📊</div>
+                <h3>No expenses yet</h3>
+                <p>
+                    Your expenses will appear here once you start tracking
+                    your spending.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 My Budget Tracker. Manage your money wisely.</p>
+    </footer>
+
+</body>
+</html>
